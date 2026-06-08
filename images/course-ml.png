@@ -1,0 +1,8 @@
+<svg width="400" height="250" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="250" fill="#10b981"/>
+  <text x="200" y="100" text-anchor="middle" fill="white" font-size="32" font-weight="bold">机器学习</text>
+  <text x="200" y="140" text-anchor="middle" fill="white" font-size="18">Machine Learning</text>
+  <circle cx="120" cy="190" r="25" fill="rgba(255,255,255,0.3)"/>
+  <circle cx="200" cy="190" r="25" fill="rgba(255,255,255,0.3)"/>
+  <circle cx="280" cy="190" r="25" fill="rgba(255,255,255,0.3)"/>
+</svg>
