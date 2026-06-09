@@ -1,8 +1,0 @@
-<svg width="400" height="250" xmlns="http://www.w3.org/2000/svg">
-  <rect width="400" height="250" fill="#1e40af"/>
-  <text x="200" y="100" text-anchor="middle" fill="white" font-size="32" font-weight="bold">Python</text>
-  <text x="200" y="140" text-anchor="middle" fill="white" font-size="18">数据分析</text>
-  <circle cx="80" cy="200" r="15" fill="rgba(255,255,255,0.3)"/>
-  <circle cx="200" cy="200" r="15" fill="rgba(255,255,255,0.3)"/>
-  <circle cx="320" cy="200" r="15" fill="rgba(255,255,255,0.3)"/>
-</svg>

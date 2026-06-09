@@ -1,8 +1,0 @@
-<svg width="400" height="250" xmlns="http://www.w3.org/2000/svg">
-  <rect width="400" height="250" fill="#7c3aed"/>
-  <text x="200" y="100" text-anchor="middle" fill="white" font-size="32" font-weight="bold">Hadoop</text>
-  <text x="200" y="140" text-anchor="middle" fill="white" font-size="18">生态系统</text>
-  <rect x="80" y="170" width="60" height="60" fill="rgba(255,255,255,0.2)" rx="4"/>
-  <rect x="170" y="170" width="60" height="60" fill="rgba(255,255,255,0.2)" rx="4"/>
-  <rect x="260" y="170" width="60" height="60" fill="rgba(255,255,255,0.2)" rx="4"/>
-</svg>
