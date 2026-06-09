@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>科目分类 - 智学园</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <img src="../images/logo.png" alt="智学园Logo">
+                    <span class="logo-text">智学园</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="../Index.html">首页</a></li>
+                    <li><a href="subjects.html" class="active">科目分类</a></li>
+                    <li><a href="grades.html">年级分类</a></li>
+                    <li><a href="quiz.html">在线答题</a></li>
+                    <li><a href="about.html">关于我们</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 页面标题 -->
+    <section class="page-header">
+        <h1>科目分类</h1>
+        <p>按学科分类浏览学习资源</p>
+    </section>
+
+    <!-- 搜索和筛选 -->
+    <section class="page-content">
+        <div class="container">
+            <div class="search-filter" style="margin-bottom: 3rem;">
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+                    <input type="text" id="searchInput" placeholder="搜索资源..." style="flex: 1; min-width: 300px; padding: 0.8rem; border: 2px solid #e0e0e0; border-radius: 5px; font-size: 1rem;">
+                    <button class="btn btn-primary" onclick="searchResources()">搜索</button>
+                </div>
+            </div>
+
+            <!-- 语文科目 -->
+            <div id="chinese" style="margin-bottom: 4rem;">
+                <h2 style="font-size: 2rem; color: #333; margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 3px solid #667eea;">
+                    📖 语文
+                </h2>
+                <div style="display: grid; gap: 1.5rem;">
+                    <div class="resource-card">
+                        <h3>古诗词鉴赏</h3>
+                        <p>包含小学到初中必背古诗词，配有详细注释和赏析</p>
+                        <div class="resource-actions">
+                            <button class="btn btn-primary" onclick="viewResource('古诗词鉴赏', '#')">在线浏览</button>
+                            <button class="btn btn-secondary" onclick="downloadResource('古诗词鉴赏', '#')">下载资源</button>
+                        </div>
+                    </div>
+                    <div class="resource-card">
+                        <h3>阅读理解技巧</h3>
+                        <p>提供阅读理解答题技巧和练习题，帮助提高阅读能力</p>
+                        <div class="resource-actions">
+                            <button class="btn btn-primary" onclick="viewResource('阅读理解技巧', '#')">在线浏览</button>
+                            <button class="btn btn-secondary" onclick="downloadResource('阅读理解技巧', '#')">下载资源</button>
+                        </div>
+                    </div>
+                    <div class="resource-card">
+                        <h3>作文写作指导</h3>
+                        <p>各类作文写作技巧、优秀范文赏析和素材积累</p>
+                        <div class="resource-actions">
+                            <button class="btn btn-primary" onclick="viewResource('作文写作指导', '#')">在线浏览</button>
+                            <button class="btn btn-secondary" onclick="downloadResource('作文写作指导', '#')">下载资源</button>
+                        </div>
+                    </div>
+                    <div class="resource-card">
+                        <h3>文言文学习</h3>
+                        <p>文言文基础知识、重点篇目翻译和练习题</p>
+                        <div class="resource-actions">
+                            <button class="btn btn-primary" onclick="viewResource('文言文学习', '#')">在线浏览</button>
+                            <button class="btn btn-secondary" onclick="downloadResource('文言文学习', '#')">下载资源</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 数学科目 -->
+            <div id="math" style="margin-bottom: 4rem;">
+                <h2 style="font-size: 2rem; color: #333; margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 3px solid #667eea;">
+                    🔢 数学
+                </h2>
+                <div style="display: grid; gap: 1.5rem;">
+                    <div class="resource-card">
+                        <h3>基础运算练习</h3>
+                        <p>加减乘除、分数、小数等基础运算题库和解题技巧</p>
+                        <div class="resource-actions">
+                            <button class="btn btn-primary" onclick="viewResource('基础运算练习', '#')">在线浏览</button>
+                            <button class="btn btn-secondary" onclick="downloadResource('基础运算练习', '#')">下载资源</button>
+                        </div>
+                    </div>
+                    <div class="resource-card">
+                        <h3>几何图形专题</h3>
+                        <p>平面图形和立体图形的性质、计算公式和应用题</p>
+                        <div class="resource-actions">
+                            <button class="btn btn-primary" onclick="viewResource('几何图形专题', '#')">在线浏览</button>
+                            <button class="btn btn-secondary" onclick="downloadResource('几何图形专题', '#')">下载资源</button>
+                        </div>
+                    </div>
+                    <div class="resource-card">
+                        <h3>应用题解析</h3>
+                        <p>各类应用题解题方法、思路分析和经典例题</p>
+                        <div class="resource-actions">
+                            <button class="btn btn-primary" onclick="viewResource('应用题解析', '#')">在线浏览</button>
+                            <button class="btn btn-secondary" onclick="downloadResource('应用题解析', '#')">下载资源</button>
+                        </div>
+                    </div>
+                    <div class="resource-card">
+                        <h3>代数与方程</h3>
+                        <p>代数基础、方程求解和不等式的学习资料</p>
+                        <div class="resource-actions">
+                            <button class="btn btn-primary" onclick="viewResource('代数与方程', '#')">在线浏览</button>
+                            <button class="btn btn-secondary" onclick="downloadResource('代数与方程', '#')">下载资源</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 英语科目 -->
+            <div id="english" style="margin-bottom: 4rem;">
+                <h2 style="font-size: 2rem; color: #333; margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 3px solid #667eea;">
+                    🌍 英语
+                </h2>
+                <div style="display: grid; gap: 1.5rem;">
+                    <div class="resource-card">
+                        <h3>词汇记忆</h3>
+                        <p>分级词汇表、记忆方法和词汇练习题</p>
+                        <div class="resource-actions">
+                            <button class="btn btn-primary" onclick="viewResource('词汇记忆', '#')">在线浏览</button>
+                            <button class="btn btn-secondary" onclick="downloadResource('词汇记忆', '#')">下载资源</button>
+                        </div>
+                    </div>
+                    <div class="resource-card">
+                        <h3>语法精讲</h3>
+                        <p>英语语法知识点详解、例句和练习</p>
+                        <div class="resource-actions">
+                            <button class="btn btn-primary" onclick="viewResource('语法精讲', '#')">在线浏览</button>
+                            <button class="btn btn-secondary" onclick="downloadResource('语法精讲', '#')">下载资源</button>
+                        </div>
+                    </div>
+                    <div class="resource-card">
+                        <h3>听力训练</h3>
+                        <p>英语听力音频材料和练习题，提高听力水平</p>
+                        <div class="resource-actions">
+                            <button class="btn btn-primary" onclick="viewResource('听力训练', '#')">在线浏览</button>
+                            <button class="btn btn-secondary" onclick="downloadResource('听力训练', '#')">下载资源</button>
+                        </div>
+                    </div>
+                    <div class="resource-card">
+                        <h3>口语练习</h3>
+                        <p>日常对话、情景练习和口语表达技巧</p>
+                        <div class="resource-actions">
+                            <button class="btn btn-primary" onclick="viewResource('口语练习', '#')">在线浏览</button>
+                            <button class="btn btn-secondary" onclick="downloadResource('口语练习', '#')">下载资源</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 科学科目 -->
+            <div id="science" style="margin-bottom: 4rem;">
+                <h2 style="font-size: 2rem; color: #333; margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 3px solid #667eea;">
+                    🔬 科学
+                </h2>
+                <div style="display: grid; gap: 1.5rem;">
+                    <div class="resource-card">
+                        <h3>物理知识</h3>
+                        <p>力学、电学、光学等物理基础知识和实验</p>
+                        <div class="resource-actions">
+                            <button class="btn btn-primary" onclick="viewResource('物理知识', '#')">在线浏览</button>
+                            <button class="btn btn-secondary" onclick="downloadResource('物理知识', '#')">下载资源</button>
+                        </div>
+                    </div>
+                    <div class="resource-card">
+                        <h3>化学启蒙</h3>
+                        <p>化学元素、化学反应和实验安全知识</p>
+                        <div class="resource-actions">
+                            <button class="btn btn-primary" onclick="viewResource('化学启蒙', '#')">在线浏览</button>
+                            <button class="btn btn-secondary" onclick="downloadResource('化学启蒙', '#')">下载资源</button>
+                        </div>
+                    </div>
+                    <div class="resource-card">
+                        <h3>生物探索</h3>
+                        <p>动植物知识、人体结构和生态系统学习</p>
+                        <div class="resource-actions">
+                            <button class="btn btn-primary" onclick="viewResource('生物探索', '#')">在线浏览</button>
+                            <button class="btn btn-secondary" onclick="downloadResource('生物探索', '#')">下载资源</button>
+                        </div>
+                    </div>
+                    <div class="resource-card">
+                        <h3>科学实验</h3>
+                        <p>趣味科学实验视频和操作指南</p>
+                        <div class="resource-actions">
+                            <button class="btn btn-primary" onclick="viewResource('科学实验', '#')">在线浏览</button>
+                            <button class="btn btn-secondary" onclick="downloadResource('科学实验', '#')">下载资源</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>关于智学园</h3>
+                    <p>致力于为中小学生提供优质的学习资源和在线学习平台，帮助每一位学生实现学习目标。</p>
+                </div>
+                <div class="footer-section">
+                    <h3>快速链接</h3>
+                    <ul>
+                        <li><a href="subjects.html">科目分类</a></li>
+                        <li><a href="grades.html">年级分类</a></li>
+                        <li><a href="quiz.html">在线答题</a></li>
+                        <li><a href="about.html">关于我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>联系我们</h3>
+                    <p>Email: contact@zhixueyuan.com</p>
+                    <p>电话: 400-123-4567</p>
+                    <p>地址: 北京市海淀区学院路123号</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 智学园. 版权所有.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

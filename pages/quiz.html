@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>在线答题 - 智学园</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <img src="../images/logo.png" alt="智学园Logo">
+                    <span class="logo-text">智学园</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="../Index.html">首页</a></li>
+                    <li><a href="subjects.html">科目分类</a></li>
+                    <li><a href="grades.html">年级分类</a></li>
+                    <li><a href="quiz.html" class="active">在线答题</a></li>
+                    <li><a href="about.html">关于我们</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 页面标题 -->
+    <section class="page-header">
+        <h1>在线答题系统</h1>
+        <p>选择科目，开始练习，检验学习成果</p>
+    </section>
+
+    <!-- 科目选择 -->
+    <section class="page-content">
+        <div class="container">
+            <div style="max-width: 900px; margin: 0 auto;">
+                <h2 style="font-size: 2rem; text-align: center; margin-bottom: 3rem; color: #333;">选择答题科目</h2>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+                    <div class="subject-card" onclick="startQuiz('chinese')" style="cursor: pointer;">
+                        <img src="../images/subject-chinese.png" alt="语文">
+                        <div class="subject-info">
+                            <h3>语文答题</h3>
+                            <p>5道精选题目</p>
+                            <div class="btn btn-primary" style="margin-top: 1rem;">开始答题</div>
+                        </div>
+                    </div>
+
+                    <div class="subject-card" onclick="startQuiz('math')" style="cursor: pointer;">
+                        <img src="../images/subject-math.png" alt="数学">
+                        <div class="subject-info">
+                            <h3>数学答题</h3>
+                            <p>5道精选题目</p>
+                            <div class="btn btn-primary" style="margin-top: 1rem;">开始答题</div>
+                        </div>
+                    </div>
+
+                    <div class="subject-card" onclick="startQuiz('english')" style="cursor: pointer;">
+                        <img src="../images/subject-english.png" alt="英语">
+                        <div class="subject-info">
+                            <h3>英语答题</h3>
+                            <p>5道精选题目</p>
+                            <div class="btn btn-primary" style="margin-top: 1rem;">开始答题</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 答题区域 -->
+                <div id="quiz-container" class="quiz-container" style="display: none;">
+                    <!-- 题目将通过JavaScript动态加载到这里 -->
+                </div>
+
+                <!-- 答题说明 -->
+                <div style="background-color: #f8f9fa; padding: 2rem; border-radius: 10px; margin-top: 3rem;">
+                    <h3 style="color: #667eea; margin-bottom: 1rem;">📝 答题说明</h3>
+                    <ul style="line-height: 2; color: #666; padding-left: 2rem;">
+                        <li>每个科目包含5道精选题目</li>
+                        <li>选择您认为正确的答案，然后点击"下一题"</li>
+                        <li>完成所有题目后，系统会显示您的得分</li>
+                        <li>您可以多次练习，巩固知识点</li>
+                        <li>建议在安静的环境下认真答题</li>
+                    </ul>
+                </div>
+
+                <!-- 答题记录 -->
+                <div style="margin-top: 3rem;">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem; color: #333;">最近答题记录</h3>
+                    <div style="display: grid; gap: 1rem;">
+                        <div class="resource-card">
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <div>
+                                    <h4>数学练习</h4>
+                                    <p style="color: #999; font-size: 0.9rem;">2024年6月8日</p>
+                                </div>
+                                <div style="text-align: right;">
+                                    <div style="font-size: 1.5rem; font-weight: bold; color: #667eea;">85%</div>
+                                    <p style="color: #999; font-size: 0.9rem;">5题中答对4题</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="resource-card">
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <div>
+                                    <h4>语文练习</h4>
+                                    <p style="color: #999; font-size: 0.9rem;">2024年6月7日</p>
+                                </div>
+                                <div style="text-align: right;">
+                                    <div style="font-size: 1.5rem; font-weight: bold; color: #667eea;">100%</div>
+                                    <p style="color: #999; font-size: 0.9rem;">5题全对</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="resource-card">
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <div>
+                                    <h4>英语练习</h4>
+                                    <p style="color: #999; font-size: 0.9rem;">2024年6月6日</p>
+                                </div>
+                                <div style="text-align: right;">
+                                    <div style="font-size: 1.5rem; font-weight: bold; color: #667eea;">80%</div>
+                                    <p style="color: #999; font-size: 0.9rem;">5题中答对4题</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>关于智学园</h3>
+                    <p>致力于为中小学生提供优质的学习资源和在线学习平台，帮助每一位学生实现学习目标。</p>
+                </div>
+                <div class="footer-section">
+                    <h3>快速链接</h3>
+                    <ul>
+                        <li><a href="subjects.html">科目分类</a></li>
+                        <li><a href="grades.html">年级分类</a></li>
+                        <li><a href="quiz.html">在线答题</a></li>
+                        <li><a href="about.html">关于我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>联系我们</h3>
+                    <p>Email: contact@zhixueyuan.com</p>
+                    <p>电话: 400-123-4567</p>
+                    <p>地址: 北京市海淀区学院路123号</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 智学园. 版权所有.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        // 当用户点击科目卡片时，显示答题容器并隐藏科目选择
+        function startQuiz(subject) {
+            const quizContainer = document.getElementById('quiz-container');
+            quizContainer.style.display = 'block';
+
+            // 滚动到答题区域
+            quizContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+            // 加载题目
+            if (typeof quizSystem !== 'undefined' && typeof sampleQuestions !== 'undefined') {
+                if (sampleQuestions[subject]) {
+                    quizSystem.loadQuestions(sampleQuestions[subject]);
+                    quizSystem.displayQuestion();
+                }
+            }
+        }
+    </script>
+</body>
+</html>
