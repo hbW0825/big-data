@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>年级分类 - 智学园</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <img src="../images/logo.png" alt="智学园Logo">
+                    <span class="logo-text">智学园</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="../Index.html">首页</a></li>
+                    <li><a href="subjects.html">科目分类</a></li>
+                    <li><a href="grades.html" class="active">年级分类</a></li>
+                    <li><a href="quiz.html">在线答题</a></li>
+                    <li><a href="about.html">关于我们</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 页面标题 -->
+    <section class="page-header">
+        <h1>年级分类</h1>
+        <p>按年级浏览适合的学习资源</p>
+    </section>
+
+    <!-- 年级选择 -->
+    <section class="page-content">
+        <div class="container">
+            <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 3rem;">
+                <button class="btn btn-primary" onclick="filterByGrade('primary')">小学</button>
+                <button class="btn btn-secondary" onclick="filterByGrade('middle')">初中</button>
+            </div>
+
+            <!-- 小学部分 -->
+            <div id="primary-school" style="margin-bottom: 4rem;">
+                <h2 style="font-size: 2rem; color: #333; margin-bottom: 2rem; text-align: center;">
+                    🎒 小学阶段
+                </h2>
+
+                <!-- 一年级 -->
+                <div style="margin-bottom: 3rem;">
+                    <h3 style="font-size: 1.5rem; color: #667eea; margin-bottom: 1.5rem; padding-left: 1rem; border-left: 4px solid #667eea;">
+                        一年级
+                    </h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+                        <div class="resource-card">
+                            <h4>拼音学习</h4>
+                            <p>声母、韵母、整体认读音节的学习和练习</p>
+                            <div class="resource-actions">
+                                <button class="btn btn-primary" onclick="viewResource('拼音学习', '#')">在线浏览</button>
+                                <button class="btn btn-secondary" onclick="downloadResource('拼音学习', '#')">下载</button>
+                            </div>
+                        </div>
+                        <div class="resource-card">
+                            <h4>20以内加减法</h4>
+                            <p>数字认识、加减运算和应用题练习</p>
+                            <div class="resource-actions">
+                                <button class="btn btn-primary" onclick="viewResource('20以内加减法', '#')">在线浏览</button>
+                                <button class="btn btn-secondary" onclick="downloadResource('20以内加减法', '#')">下载</button>
+                            </div>
+                        </div>
+                        <div class="resource-card">
+                            <h4>认识图形</h4>
+                            <p>基本平面图形和立体图形的认识</p>
+                            <div class="resource-actions">
+                                <button class="btn btn-primary" onclick="viewResource('认识图形', '#')">在线浏览</button>
+                                <button class="btn btn-secondary" onclick="downloadResource('认识图形', '#')">下载</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 二年级 -->
+                <div style="margin-bottom: 3rem;">
+                    <h3 style="font-size: 1.5rem; color: #667eea; margin-bottom: 1.5rem; padding-left: 1rem; border-left: 4px solid #667eea;">
+                        二年级
+                    </h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+                        <div class="resource-card">
+                            <h4>识字与写字</h4>
+                            <p>常用汉字学习、笔顺练习和组词造句</p>
+                            <div class="resource-actions">
+                                <button class="btn btn-primary" onclick="viewResource('识字与写字', '#')">在线浏览</button>
+                                <button class="btn btn-secondary" onclick="downloadResource('识字与写字', '#')">下载</button>
+                            </div>
+                        </div>
+                        <div class="resource-card">
+                            <h4>乘法口诀</h4>
+                            <p>九九乘法表和乘除法应用题</p>
+                            <div class="resource-actions">
+                                <button class="btn btn-primary" onclick="viewResource('乘法口诀', '#')">在线浏览</button>
+                                <button class="btn btn-secondary" onclick="downloadResource('乘法口诀', '#')">下载</button>
+                            </div>
+                        </div>
+                        <div class="resource-card">
+                            <h4>时间与测量</h4>
+                            <p>认识钟表、长度单位和重量单位</p>
+                            <div class="resource-actions">
+                                <button class="btn btn-primary" onclick="viewResource('时间与测量', '#')">在线浏览</button>
+                                <button class="btn btn-secondary" onclick="downloadResource('时间与测量', '#')">下载</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 三至六年级 -->
+                <div style="margin-bottom: 3rem;">
+                    <h3 style="font-size: 1.5rem; color: #667eea; margin-bottom: 1.5rem; padding-left: 1rem; border-left: 4px solid #667eea;">
+                        三至六年级
+                    </h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+                        <div class="resource-card">
+                            <h4>语文综合</h4>
+                            <p>阅读理解、作文写作、古诗词和文言文</p>
+                            <div class="resource-actions">
+                                <button class="btn btn-primary" onclick="viewResource('语文综合', '#')">在线浏览</button>
+                                <button class="btn btn-secondary" onclick="downloadResource('语文综合', '#')">下载</button>
+                            </div>
+                        </div>
+                        <div class="resource-card">
+                            <h4>数学应用</h4>
+                            <p>分数、小数、百分数和应用题专项训练</p>
+                            <div class="resource-actions">
+                                <button class="btn btn-primary" onclick="viewResource('数学应用', '#')">在线浏览</button>
+                                <button class="btn btn-secondary" onclick="downloadResource('数学应用', '#')">下载</button>
+                            </div>
+                        </div>
+                        <div class="resource-card">
+                            <h4>英语学习</h4>
+                            <p>词汇、语法、阅读和听力全面提升</p>
+                            <div class="resource-actions">
+                                <button class="btn btn-primary" onclick="viewResource('英语学习', '#')">在线浏览</button>
+                                <button class="btn btn-secondary" onclick="downloadResource('英语学习', '#')">下载</button>
+                            </div>
+                        </div>
+                        <div class="resource-card">
+                            <h4>科学探究</h4>
+                            <p>物质科学、生命科学、地球与宇宙科学</p>
+                            <div class="resource-actions">
+                                <button class="btn btn-primary" onclick="viewResource('科学探究', '#')">在线浏览</button>
+                                <button class="btn btn-secondary" onclick="downloadResource('科学探究', '#')">下载</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 初中部分 -->
+            <div id="middle-school" style="margin-bottom: 4rem;">
+                <h2 style="font-size: 2rem; color: #333; margin-bottom: 2rem; text-align: center;">
+                    📚 初中阶段
+                </h2>
+
+                <!-- 初一 -->
+                <div style="margin-bottom: 3rem;">
+                    <h3 style="font-size: 1.5rem; color: #764ba2; margin-bottom: 1.5rem; padding-left: 1rem; border-left: 4px solid #764ba2;">
+                        初一（七年级）
+                    </h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+                        <div class="resource-card">
+                            <h4>语文</h4>
+                            <p>现代文阅读、文言文、作文和名著阅读</p>
+                            <div class="resource-actions">
+                                <button class="btn btn-primary" onclick="viewResource('初一语文', '#')">在线浏览</button>
+                                <button class="btn btn-secondary" onclick="downloadResource('初一语文', '#')">下载</button>
+                            </div>
+                        </div>
+                        <div class="resource-card">
+                            <h4>数学</h4>
+                            <p>有理数、整式、一元一次方程和几何初步</p>
+                            <div class="resource-actions">
+                                <button class="btn btn-primary" onclick="viewResource('初一数学', '#')">在线浏览</button>
+                                <button class="btn btn-secondary" onclick="downloadResource('初一数学', '#')">下载</button>
+                            </div>
+                        </div>
+                        <div class="resource-card">
+                            <h4>英语</h4>
+                            <p>语法基础、词汇扩展和阅读写作训练</p>
+                            <div class="resource-actions">
+                                <button class="btn btn-primary" onclick="viewResource('初一英语', '#')">在线浏览</button>
+                                <button class="btn btn-secondary" onclick="downloadResource('初一英语', '#')">下载</button>
+                            </div>
+                        </div>
+                        <div class="resource-card">
+                            <h4>科学</h4>
+                            <p>生物、地理基础知识和实验探究</p>
+                            <div class="resource-actions">
+                                <button class="btn btn-primary" onclick="viewResource('初一科学', '#')">在线浏览</button>
+                                <button class="btn btn-secondary" onclick="downloadResource('初一科学', '#')">下载</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 初二 -->
+                <div style="margin-bottom: 3rem;">
+                    <h3 style="font-size: 1.5rem; color: #764ba2; margin-bottom: 1.5rem; padding-left: 1rem; border-left: 4px solid #764ba2;">
+                        初二（八年级）
+                    </h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+                        <div class="resource-card">
+                            <h4>语文</h4>
+                            <p>议论文写作、古诗文鉴赏和综合性学习</p>
+                            <div class="resource-actions">
+                                <button class="btn btn-primary" onclick="viewResource('初二语文', '#')">在线浏览</button>
+                                <button class="btn btn-secondary" onclick="downloadResource('初二语文', '#')">下载</button>
+                            </div>
+                        </div>
+                        <div class="resource-card">
+                            <h4>数学</h4>
+                            <p>函数、三角形、四边形和数据分析</p>
+                            <div class="resource-actions">
+                                <button class="btn btn-primary" onclick="viewResource('初二数学', '#')">在线浏览</button>
+                                <button class="btn btn-secondary" onclick="downloadResource('初二数学', '#')">下载</button>
+                            </div>
+                        </div>
+                        <div class="resource-card">
+                            <h4>英语</h4>
+                            <p>时态深化、从句学习和完形填空技巧</p>
+                            <div class="resource-actions">
+                                <button class="btn btn-primary" onclick="viewResource('初二英语', '#')">在线浏览</button>
+                                <button class="btn btn-secondary" onclick="downloadResource('初二英语', '#')">下载</button>
+                            </div>
+                        </div>
+                        <div class="resource-card">
+                            <h4>物理</h4>
+                            <p>力学、光学、声学和电学基础</p>
+                            <div class="resource-actions">
+                                <button class="btn btn-primary" onclick="viewResource('初二物理', '#')">在线浏览</button>
+                                <button class="btn btn-secondary" onclick="downloadResource('初二物理', '#')">下载</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 初三 -->
+                <div style="margin-bottom: 3rem;">
+                    <h3 style="font-size: 1.5rem; color: #764ba2; margin-bottom: 1.5rem; padding-left: 1rem; border-left: 4px solid #764ba2;">
+                        初三（九年级）
+                    </h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+                        <div class="resource-card">
+                            <h4>语文中考冲刺</h4>
+                            <p>中考真题、答题技巧和考点精讲</p>
+                            <div class="resource-actions">
+                                <button class="btn btn-primary" onclick="viewResource('初三语文', '#')">在线浏览</button>
+                                <button class="btn btn-secondary" onclick="downloadResource('初三语文', '#')">下载</button>
+                            </div>
+                        </div>
+                        <div class="resource-card">
+                            <h4>数学中考专题</h4>
+                            <p>二次函数、圆、相似三角形和综合题训练</p>
+                            <div class="resource-actions">
+                                <button class="btn btn-primary" onclick="viewResource('初三数学', '#')">在线浏览</button>
+                                <button class="btn btn-secondary" onclick="downloadResource('初三数学', '#')">下载</button>
+                            </div>
+                        </div>
+                        <div class="resource-card">
+                            <h4>英语中考备考</h4>
+                            <p>完形填空、阅读理解、写作和听力专项</p>
+                            <div class="resource-actions">
+                                <button class="btn btn-primary" onclick="viewResource('初三英语', '#')">在线浏览</button>
+                                <button class="btn btn-secondary" onclick="downloadResource('初三英语', '#')">下载</button>
+                            </div>
+                        </div>
+                        <div class="resource-card">
+                            <h4>化学入门</h4>
+                            <p>化学基本概念、元素化合物和化学计算</p>
+                            <div class="resource-actions">
+                                <button class="btn btn-primary" onclick="viewResource('初三化学', '#')">在线浏览</button>
+                                <button class="btn btn-secondary" onclick="downloadResource('初三化学', '#')">下载</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>关于智学园</h3>
+                    <p>致力于为中小学生提供优质的学习资源和在线学习平台，帮助每一位学生实现学习目标。</p>
+                </div>
+                <div class="footer-section">
+                    <h3>快速链接</h3>
+                    <ul>
+                        <li><a href="subjects.html">科目分类</a></li>
+                        <li><a href="grades.html">年级分类</a></li>
+                        <li><a href="quiz.html">在线答题</a></li>
+                        <li><a href="about.html">关于我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>联系我们</h3>
+                    <p>Email: contact@zhixueyuan.com</p>
+                    <p>电话: 400-123-4567</p>
+                    <p>地址: 北京市海淀区学院路123号</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 智学园. 版权所有.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
